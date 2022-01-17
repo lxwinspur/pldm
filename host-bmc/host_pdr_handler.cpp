@@ -7,7 +7,7 @@
 #include "libpldm/state_set.h"
 #include "oem/ibm/libpldm/fru.h"
 
-#include "custom_dbus.hpp"
+#include "dbus/custom_dbus.hpp"
 
 #include <assert.h>
 
@@ -148,7 +148,7 @@ HostPDRHandler::HostPDRHandler(
             const auto itr = props.find("CurrentHostState");
             if (itr != props.end())
             {
-                PropertyValue value = itr->second;
+                utils::PropertyValue value = itr->second;
                 auto propVal = std::get<std::string>(value);
                 if (propVal == "xyz.openbmc_project.State.Host.HostState.Off")
                 {
@@ -201,7 +201,7 @@ HostPDRHandler::HostPDRHandler(
             const auto itr = props.find("CurrentPowerState");
             if (itr != props.end())
             {
-                PropertyValue value = itr->second;
+                utils::PropertyValue value = itr->second;
                 auto propVal = std::get<std::string>(value);
                 if (propVal ==
                     "xyz.openbmc_project.State.Chassis.PowerState.Off")

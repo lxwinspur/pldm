@@ -1,0 +1,8 @@
+{
+    "objectPaths": [
+        "system/chassis/motherboard/dcm0/cpu0",
+        "system/chassis/motherboard/dcm0/cpu1",
+        "system/chassis/motherboard/dcm1/cpu0",
+        "system/chassis/motherboard/dcm1/cpu1"
+    ]
+}
